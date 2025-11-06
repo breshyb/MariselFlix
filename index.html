@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marisel Flix</title>
+    <link rel="icon" type="image/x-icon" href="https://files.catbox.moe/kt6b64.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#e50914">
+    <meta name="description" content="Marisel Flix - Your favorite movies and series">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Marisel Flix">
+    <link rel="apple-touch-icon" href="https://files.catbox.moe/kt6b64.jpg">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Install App Banner -->
+    <div id="install-banner">
+        <div class="install-header">
+            <img src="https://files.catbox.moe/kt6b64.jpg" alt="Marisel Flix" class="install-logo">
+            <div class="install-title">Marisel Flix</div>
+        </div>
+        <div class="install-subtitle">Install our app for faster access and offline viewing</div>
+        <div class="install-buttons">
+            <button class="install-btn install-now" id="install-app">Install</button>
+            <button class="install-btn install-later" id="install-later">Not now</button>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <img src="https://files.catbox.moe/kt6b64.jpg" alt="Marisel Flix" id="loading-logo">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="/" class="logo">
+            <img src="https://files.catbox.moe/kt6b64.jpg" alt="Marisel Flix" class="logo-img">
+            <div class="logo-text">
+                <span>Marisel</span><span>Flix</span>
+            </div>
+        </a>
+        <button class="search-btn" id="search-toggle">
+            <i class="fas fa-search"></i>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title" id="hero-title">Featured Movie</h1>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="hero-play-btn">
+                        <i class="fas fa-play"></i> Play
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Browse Categories</h2>
+            </div>
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">All</button>
+                <button class="category-tab" data-category="action">Action</button>
+                <button class="category-tab" data-category="comedy">Comedy</button>
+                <button class="category-tab" data-category="drama">Drama</button>
+                <button class="category-tab" data-category="sci-fi">Sci-Fi</button>
+                <button class="category-tab" data-category="horror">Horror</button>
+                <button class="category-tab" data-category="anime">Anime</button>
+                <button class="category-tab" data-category="korean">Korean Drama</button>
+                <button class="category-tab" data-category="nollywood">Nollywood</button>
+                <button class="category-tab" data-category="bollywood">Bollywood</button>
+                <button class="category-tab" data-category="chinese">Chinese Movies</button>
+                <button class="category-tab" data-category="romance">Romance</button>
+                <button class="category-tab" data-category="teen-movies">Teen Movies</button>
+                <button class="category-tab" data-category="teen-series">Teen Series</button>
+                <button class="category-tab" data-category="disney">Disney</button>
+                <button class="category-tab" data-category="marvel">Marvel</button>
+            </div>
+        </section>
+
+        <!-- Anime -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Anime</h2>
+                <a href="/category/anime" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="anime-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Continue Watching -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Continue Watching</h2>
+                <a href="#" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="continue-watching">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Top Trending -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Top Trending</h2>
+                <a href="/category/trending" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="top-trending">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Nollywood -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Nollywood</h2>
+                <a href="/category/nollywood" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="nollywood-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Chinese Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Chinese Movies</h2>
+                <a href="/category/chinese" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="chinese-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Romance -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Romance</h2>
+                <a href="/category/romance" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="romance-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Teen Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Teen Movies</h2>
+                <a href="/category/teen-movies" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="teen-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Teen Series -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Teen Series</h2>
+                <a href="/category/teen-series" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="teen-series">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Halloween Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Halloween Movies</h2>
+                <a href="/category/new-releases" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="new-releases">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Disney Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Disney Movies</h2>
+                <a href="/category/disney" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="disney-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Marvel Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Marvel Movies</h2>
+                <a href="/category/marvel" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="marvel-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Popular Movies -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Popular Movies</h2>
+                <a href="/category/popular-movies" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="popular-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Popular Series -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Popular Series</h2>
+                <a href="/category/popular-series" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="popular-series">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+
+        <!-- Horror -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Horror</h2>
+                <a href="/category/horror" class="see-more">See More</a>
+            </div>
+            <div class="movies-row" id="horror-movies">
+                <!-- Dynamic content -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <span>Marisel</span><span>Flix</span>
+        </div>
+        <p class="copyright">© 2025 Marisel Studio. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+    </html>
