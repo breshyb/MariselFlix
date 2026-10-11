@@ -1,6 +1,6 @@
 class MariselFlix {
     constructor() {
-        this.baseURL = 'https://movieapi.giftedtech.co.ke';
+        this.baseURL = 'https://h5-api.aoneroom.com/wefeed-h5api-bff';
         this.currentMovie = null;
         this.currentHeroIndex = 0;
         this.heroMovies = [];
